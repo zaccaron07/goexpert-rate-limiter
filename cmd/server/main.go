@@ -45,6 +45,10 @@ func main() {
 
 	addr := ":" + cfg.Server.Port
 	fmt.Printf("Server started at port %s\n", cfg.Server.Port)
+	fmt.Printf("IP Requests Per Second: %d\n", rlCfg.IPRequestsPerSecond)
+	fmt.Printf("IP Block Duration Seconds: %d\n", rlCfg.IPBlockDurationSeconds)
+	fmt.Printf("Token Requests Per Second: %d\n", rlCfg.TokenRequestsPerSecond)
+	fmt.Printf("Token Block Duration Seconds: %d\n", rlCfg.TokenBlockDurationSeconds)
 	if err := http.ListenAndServe(addr, rateLimitedHandler); err != nil {
 		log.Fatalf("Error starting server: %v", err)
 	}

@@ -58,8 +58,8 @@ func handleRateLimitExceeded(w http.ResponseWriter, result entities.RateLimitRes
 }
 
 func addRateLimitHeaders(w http.ResponseWriter, result entities.RateLimitResult) {
-	w.Header().Set("X-RateLimit-Remaining", strconv.Itoa(result.Remaining))
-	w.Header().Set("X-RateLimit-Reset", result.ResetTime.Format(time.RFC3339))
+	w.Header().Set("X-Ratelimit-Remaining", strconv.Itoa(result.Remaining))
+	w.Header().Set("X-Ratelimit-Reset", result.ResetTime.Format(time.RFC3339))
 }
 
 func getTokenFromRequest(r *http.Request) (string, bool) {
