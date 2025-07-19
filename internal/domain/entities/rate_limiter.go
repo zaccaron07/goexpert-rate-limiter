@@ -23,10 +23,3 @@ type RateLimitRequest struct {
 	Type      RateLimitType
 	Timestamp time.Time
 }
-
-type RateLimitResponse struct {
-	Allowed    bool      `json:"allowed"`
-	Remaining  int       `json:"remaining"`
-	ResetTime  time.Time `json:"reset_time"`
-	BlockUntil time.Time `json:"block_until,omitempty"`
-}
