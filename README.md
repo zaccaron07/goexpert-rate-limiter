@@ -56,7 +56,7 @@ HTTP/1.1 429 Too Many Requests
 }
 ```
 
-## Teste de carga rápido (k6)
+## Teste de carga (k6)
 
 ```bash
 # Por IP
