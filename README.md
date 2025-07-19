@@ -47,8 +47,6 @@ HTTP 429 Too Many Requests
 
 ## Como rodar os testes de carga com k6
 
-Você pode rodar os testes de carga localmente ou via Docker Compose:
-
 - Instale o [k6](https://grafana.com/docs/k6/latest/set-up/install-k6/).
 
 - Para o teste de limite por IP:
