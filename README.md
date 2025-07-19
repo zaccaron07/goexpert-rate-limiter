@@ -10,6 +10,11 @@ Projeto desenvolvido em Go para limitar requisições (rate limiting) utilizando
 - Cabeçalhos de resposta informando o status do rate limit
 - Configuração flexível via variáveis de ambiente
 
+## Configuração
+
+- Edite as variáveis no arquivo `env.example`, o arquivo será copiado como `.env` na raiz do projeto durante o build do docker.
+- Para testar limite por token, envie o header `API_KEY` na requisição.
+
 ## Como rodar localmente com Docker
 
 ```bash
