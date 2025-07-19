@@ -45,9 +45,9 @@ func Load() (*Config, error) {
 
 	config.RateLimiter = RateLimiterConfig{
 		IPRequestsPerSecond:       getEnvAsInt("IP_REQUESTS_PER_SECOND", 10),
-		IPBlockDurationSeconds:    getEnvAsInt("IP_BLOCK_DURATION_SECONDS", 300),
-		TokenRequestsPerSecond:    getEnvAsInt("TOKEN_REQUESTS_PER_SECOND", 100),
-		TokenBlockDurationSeconds: getEnvAsInt("TOKEN_BLOCK_DURATION_SECONDS", 600),
+		IPBlockDurationSeconds:    getEnvAsInt("IP_BLOCK_DURATION_SECONDS", 5),
+		TokenRequestsPerSecond:    getEnvAsInt("TOKEN_REQUESTS_PER_SECOND", 10),
+		TokenBlockDurationSeconds: getEnvAsInt("TOKEN_BLOCK_DURATION_SECONDS", 5),
 	}
 
 	config.Server = ServerConfig{
